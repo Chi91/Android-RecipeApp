@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recipe.RecipeList">
+
+    <TextView
+        android:id="@+id/textview_second_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Füge ein neues Rezept hinzu"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#FF5722"
+        android:text="Speichern"
+        app:cornerRadius="50px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/boxview"
+        android:ems="13"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="35px"
+        app:layout_constraintBottom_toTopOf="@+id/et_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_title" />
+
+    <EditText
+        android:id="@+id/et_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/boxview"
+        android:ems="13"
+        android:hint="Beschreibung"
+        android:inputType="textPersonName"
+        android:padding="35px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <EditText
+        android:id="@+id/et_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/boxview"
+        android:ems="13"
+        android:hint="Dauer"
+        android:inputType="textPersonName"
+        android:padding="35px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_desc" />
+
+    <EditText
+        android:id="@+id/et_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/boxview"
+        android:ems="13"
+        android:hint="Schwierigkeit"
+        android:inputType="textPersonName"
+        android:padding="35px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_duration" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="131dp"
+        android:src="@drawable/recipe_book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_difficulty" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabRecipeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        app:backgroundTint="#E4C569"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_dinner_dining_24" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#BAB7B7"
+        android:text="Löschen"
+        app:cornerRadius="50px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

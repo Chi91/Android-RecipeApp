@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/recipeList">
+
+    <fragment
+        android:id="@+id/recipeList"
+        android:name="com.example.recipekotlin.recipe.RecipeList"
+        android:label="fragment_recipe_list"
+        tools:layout="@layout/fragment_recipe_list" >
+        <action
+            android:id="@+id/action_recipeList_to_recipeEdit"
+            app:destination="@id/recipeEdit" />
+
+        <argument
+            android:name="recipe_id"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeEdit"
+        android:name="com.example.recipekotlin.recipe.RecipeEdit"
+        android:label="fragment_recipe_edit"
+        tools:layout="@layout/fragment_recipe_edit" >
+        <action
+            android:id="@+id/action_recipeEdit_to_ingredientList"
+            app:destination="@id/ingredientList" />
+        <action
+            android:id="@+id/action_recipeEdit_to_recipeList"
+            app:destination="@id/recipeList" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientList"
+        android:name="com.example.recipekotlin.ingredient.IngredientList"
+        android:label="fragment_ingredient_list"
+        tools:layout="@layout/fragment_ingredient_list" >
+        <action
+            android:id="@+id/action_ingredientList_to_ingredientEdit"
+            app:destination="@id/ingredientEdit" />
+        <action
+            android:id="@+id/action_ingredientList_to_recipeList"
+            app:destination="@id/recipeList" />
+        <action
+            android:id="@+id/action_ingredientList_to_recipeList2"
+            app:destination="@id/recipeList" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientEdit"
+        android:name="com.example.recipekotlin.ingredient.IngredientEdit"
+        android:label="fragment_ingredient_edit"
+        tools:layout="@layout/fragment_ingredient_edit" >
+        <action
+            android:id="@+id/action_ingredientEdit_to_ingredientList"
+            app:destination="@id/ingredientList" />
+    </fragment>
+</navigation>

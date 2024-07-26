@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="Zutatenliste"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_nameOfIngredient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FF5722"
+        android:text="Speichern"
+        app:cornerRadius="50px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/takenPic" />
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/boxview"
+        android:ems="13"
+        android:hint="Anzahl"
+        android:inputType="textPersonName"
+        android:padding="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nameOfIngredient" />
+
+    <EditText
+        android:id="@+id/et_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/boxview"
+        android:ems="13"
+        android:hint="Gewicht"
+        android:inputType="textPersonName"
+        android:padding="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_amount" />
+
+    <EditText
+        android:id="@+id/et_nameOfIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/boxview"
+        android:ems="13"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="99dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grocery" />
+
+    <Button
+        android:id="@+id/ingredient_deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#BAB7B7"
+        android:text="Löschen"
+        app:cornerRadius="50px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/takenPic" />
+
+    <Button
+        android:id="@+id/fotoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="#FF5722"
+        android:text="Foto machen"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/takenPic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_volume"
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+    <ImageView
+        android:id="@+id/takenPic"
+        android:layout_width="173dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="119dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fotoBtn"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
